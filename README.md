@@ -1,6 +1,15 @@
 yii2-grid
 =========
 
+## Forked to add tricolumn option instead of boolean
+- the only file changed to add the icons is:
+yii2-grid/GridView.php
+
+- and added
+TrivalentColumn.php
+
+
+
 [![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-grid/v/stable)](https://packagist.org/packages/kartik-v/yii2-grid)
 [![Latest Unstable Version](https://poser.pugx.org/kartik-v/yii2-grid/v/unstable)](https://packagist.org/packages/kartik-v/yii2-grid)
 [![License](https://poser.pugx.org/kartik-v/yii2-grid/license)](https://packagist.org/packages/kartik-v/yii2-grid)
@@ -14,12 +23,12 @@ Refer [detailed documentation](http://demos.krajee.com/grid) and/or a [complete 
 ![GridView Screenshot](https://lh4.googleusercontent.com/-4x-CdyyZAsY/VNxLPmaaAXI/AAAAAAAAAQ8/XYYxTiQZvJk/w868-h516-no/krajee-yii2-grid.jpg)
 
 ## Latest Release
-The latest version of the module is v3.1.2. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-grid/blob/master/CHANGE.md) for details. 
+The latest version of the module is v3.1.2. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-grid/blob/master/CHANGE.md) for details.
 
 New features with release 2.7.0.
 
 1. A brand new column `ExpandRowColumn` has been added which allows one to expand grid rows, show details, or load content via ajax. Check the [ExpandRowColumn documentation](http://demos.krajee.com/grid#expand-row-column) for further details. The features available with this column are:
-    - Ability to expand grid rows and show a detail content in a new row below it like a master detail record. 
+    - Ability to expand grid rows and show a detail content in a new row below it like a master detail record.
     - Allows configuring the column like any grid DataColumn. The value of the column determines if the row is to be expanded or collapsed by default.
     - Allows you to configure/customize the expand and collapse indicators.
     - Ability to configure only specific rows to have expand/collapse functionality.
@@ -82,14 +91,14 @@ Add custom header or footer rows, above / below your default grid header and foo
 Allows resizing of the columns just like a spreadsheet (since v3.0.0). Uses the [JQuery ResizableColumns plugin](https://github.com/dobtco/jquery-resizable-columns) for resize and [store.js](https://github.com/marcuswestin/store.js/) for localStorage persistence.
 
 ### Floating Header (New)
-Allows the grid table to have a floating table header. Uses the [JQuery Float THead plugin](http://mkoryak.github.io/floatThead) to display a seamless floating table header. 
+Allows the grid table to have a floating table header. Uses the [JQuery Float THead plugin](http://mkoryak.github.io/floatThead) to display a seamless floating table header.
 
 ### Panel (New)
 Allows configuration of GridView to be enclosed in a panel that can be styled as per  Bootstrap 3.x. The panel will enable configuration of  various
 sections to embed content/buttons, before and after header, and before and after footer.
 
 ### Toolbar (New)
-The grid offers ability to configure toolbar for adding various actions. The default templates place the toolbar in the `before` section of the `panel`. The toolbar is by default styled using Bootstrap button groups. Some of the default actions like the `export` button is by default appended to the toolbar. 
+The grid offers ability to configure toolbar for adding various actions. The default templates place the toolbar in the `before` section of the `panel`. The toolbar is by default styled using Bootstrap button groups. Some of the default actions like the `export` button is by default appended to the toolbar.
 With version v2.1.0, if you are using the `yii2-dynagrid` extension it automatically displays the  **personalize**, **sort**, and **filter** buttons in the toolbar. The toolbar can be configured as a simple array. Refer the [docs and demos](http://demos.krajee.com/grid) for details.
 
 ### Grid Plugins (New)
@@ -103,12 +112,12 @@ summary/totals for the current GridView page. The following parameters are appli
 - `pageSummaryRowOptions`:  _array_, HTML attributes for the page summary row. Defaults to `['class' => 'kv-page-summary warning']`.
 
 ### Export Grid Data (New)
-This is a new feature added to the GridView widget. It allows you to export the displayed grid content as HTML, CSV, TEXT, EXCEL, PDF, & JSON. It uses the rendered grid data on client to convert to one of the format specified using JQuery. 
+This is a new feature added to the GridView widget. It allows you to export the displayed grid content as HTML, CSV, TEXT, EXCEL, PDF, & JSON. It uses the rendered grid data on client to convert to one of the format specified using JQuery.
 This is supported across all browsers. The PDF rendering is achieved through a separate extension [yii2-mpdf](http://demos.krajee.com/mpdf).
 
 Features offered by yii2-grid export:
 
-- Ability to preprocess and convert column data to your desired value before exporting. There is a new property `exportConversions` that can be setup in GridView. 
+- Ability to preprocess and convert column data to your desired value before exporting. There is a new property `exportConversions` that can be setup in GridView.
 For example, this currently is set as a default to convert the HTML formatted icons for BooleanColumn to user friendly text like `Active` or `Inactive` after export.
 - Hide any row or column in the grid by adding one or more of the following CSS classes:
     - `skip-export`: Will skip this element during export for all formats (`html`, `csv`, `txt`, `xls`, `pdf`, `json`).
@@ -121,11 +130,11 @@ For example, this currently is set as a default to convert the HTML formatted ic
     These CSS can be set virtually anywhere. For example `headerOptions`, `contentOptions`, `beforeHeader` etc.
 - With release v2.1.0, you can now merge additional action items to the export button dropdown.
 - With release v2.3.0 the export functionality includes these additional features:
-    - A separate export popup progress window is now shown for download. 
+    - A separate export popup progress window is now shown for download.
     - Asynchronous export process on the separate window - and avoid any grid refresh
     - Set export mime types to be configurable
     - Includes support for exporting new file types:
-        - JSON export 
+        - JSON export
         - PDF export (using `yii2-mpdf` extension)
     - Adds functionality for full data export
     - Enhance icons formatting for export file types (and beautify optionally using font awesome)
@@ -156,7 +165,7 @@ within another formula column. Refer [documentation](http://demos.krajee.com/gri
 
 ## Boolean Column (New)
 ### \kartik\grid\BooleanColumn
-This is a new grid column class that extends the \kartik\grid\DataColumn class. It automatically converts boolean data (true/false) values to user friendly indicators or labels (that are configurable). 
+This is a new grid column class that extends the \kartik\grid\DataColumn class. It automatically converts boolean data (true/false) values to user friendly indicators or labels (that are configurable).
 Refer [documentation](http://demos.krajee.com/grid#boolean-column) for details. The following are new features added since release v1.6.0:
 
 - `BooleanColumn` icons have been setup as `ICON_ACTIVE` and `ICON_INACTIVE` constants in GridView.
@@ -188,7 +197,7 @@ You can see detailed [documentation](http://demos.krajee.com/grid) and [demonstr
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 ### Pre-requisites
-> Note: Check the [composer.json](https://github.com/kartik-v/yii2-dropdown-x/blob/master/composer.json) for this extension's requirements and dependencies. 
+> Note: Check the [composer.json](https://github.com/kartik-v/yii2-dropdown-x/blob/master/composer.json) for this extension's requirements and dependencies.
 You must set the `minimum-stability` to `dev` in the **composer.json** file in your application root folder before installation of this extension OR
 if your `minimum-stability` is set to any other value other than `dev`, then set the following in the require section of your composer.json file
 
@@ -232,7 +241,7 @@ $gridColumns = [
     [
         'attribute'=>'color',
         'value'=>function ($model, $key, $index, $widget) {
-            return "<span class='badge' style='background-color: {$model->color}'> </span>  <code>" . 
+            return "<span class='badge' style='background-color: {$model->color}'> </span>  <code>" .
                 $model->color . '</code>';
         },
         'filterType'=>GridView::FILTER_COLOR,
@@ -243,7 +252,7 @@ $gridColumns = [
     ],
     [
         'class'=>'kartik\grid\BooleanColumn',
-        'attribute'=>'status', 
+        'attribute'=>'status',
         'vAlign'=>'middle',
     ],
     [
@@ -253,7 +262,7 @@ $gridColumns = [
         'urlCreator' => function($action, $model, $key, $index) { return '#'; },
         'viewOptions'=>['title'=>$viewMsg, 'data-toggle'=>'tooltip'],
         'updateOptions'=>['title'=>$updateMsg, 'data-toggle'=>'tooltip'],
-        'deleteOptions'=>['title'=>$deleteMsg, 'data-toggle'=>'tooltip'], 
+        'deleteOptions'=>['title'=>$deleteMsg, 'data-toggle'=>'tooltip'],
     ],
     ['class' => 'kartik\grid\CheckboxColumn']
 ];
@@ -265,9 +274,9 @@ echo GridView::widget([
     'beforeHeader'=>[
         [
             'columns'=>[
-                ['content'=>'Header Before 1', 'options'=>['colspan'=>4, 'class'=>'text-center warning']], 
-                ['content'=>'Header Before 2', 'options'=>['colspan'=>4, 'class'=>'text-center warning']], 
-                ['content'=>'Header Before 3', 'options'=>['colspan'=>3, 'class'=>'text-center warning']], 
+                ['content'=>'Header Before 1', 'options'=>['colspan'=>4, 'class'=>'text-center warning']],
+                ['content'=>'Header Before 2', 'options'=>['colspan'=>4, 'class'=>'text-center warning']],
+                ['content'=>'Header Before 3', 'options'=>['colspan'=>3, 'class'=>'text-center warning']],
             ],
             'options'=>['class'=>'skip-export'] // remove this row from export
         ]
