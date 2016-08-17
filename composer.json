@@ -1,5 +1,5 @@
 {
-    "name": "kartik-v/yii2-grid",
+    "name": "open-ecommerce/yii2-grid",
     "description": "Yii 2 GridView on steroids. Various enhancements and utilities for the Yii 2.0 GridView widget.",
     "keywords": [
         "yii2",
@@ -7,7 +7,7 @@
         "widget",
         "grid"
     ],
-    "homepage": "https://github.com/kartik-v/yii2-grid",
+    "homepage": "https://github.com/open-ecommerce/yii2-grid",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
