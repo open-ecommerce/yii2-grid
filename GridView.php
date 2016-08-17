@@ -34,6 +34,14 @@ use kartik\dialog\Dialog;
  */
 class GridView extends \yii\grid\GridView
 {
+
+    /**
+     * Trivalen Icons
+     */
+    const ICON_TRIVALENT_ONE = '<span class="glyphicon glyphicon-remove text-danger"></span>';
+    const ICON_TRIVALENT_TWO = '<span class="glyphicon glyphicon-hourglass text-success"></span>';
+    const ICON_TRIVALENT_THREE = '<span class="glyphicon glyphicon-ok text-success"></span>';
+
     /**
      * Bootstrap Contextual Color Types
      */
@@ -220,7 +228,7 @@ HTML;
     <div class="pull-right">
         <div class="btn-toolbar kv-grid-toolbar" role="toolbar">
             {toolbar}
-        </div>    
+        </div>
     </div>
     {before}
     <div class="clearfix"></div>
