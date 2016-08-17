@@ -1,12 +1,17 @@
 yii2-grid
 =========
 
-## Forked to add tricolumn option instead of boolean
+## Note about this Forked version
+
+### Forked to add tricolumn option instead of boolean by Eduardo G.
 - the only file changed to add the icons is:
 yii2-grid/GridView.php
 
 - and added
 TrivalentColumn.php
+
+
+![Trivalent Column Screenshot](trivalent-screenshot.jpg)
 
 
 
